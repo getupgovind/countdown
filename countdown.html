@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>countDown</title>
+    <style>
+        .outer{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            gap: 3rem;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
+        }
+        .inner{
+            display: flex;
+            gap: 1rem;
+        }
+        #d{
+            /* width: 200px; */
+            /* height: 100px; */
+           border: 2px dotted orangered;
+           text-align: center;
+           padding: 1rem;
+           font-size: 8rem;
+           letter-spacing: 2px;
+           background-color: wheat;
+           font-weight: 500;
+           font-family: cursive;
+
+        }
+        #s{
+            /* width: 200px; */
+            /* height: 100px; */
+           border: 2px dotted orangered;
+           text-align: center;
+           padding: 1rem;
+           font-size: 8rem;
+           letter-spacing: 2px;
+           background-color: wheat;
+           font-weight: 500;
+           font-family: cursive;
+
+        }
+        #m{
+            /* width: 200px; */
+            /* height: 100px; */
+           border: 2px dotted orangered;
+           text-align: center;
+           padding: 1rem;
+           font-size: 8rem;
+           letter-spacing: 2px;
+           background-color: wheat;
+           font-weight: 500;
+           font-family: cursive;
+        }
+        #h{
+            /* width: 200px; */
+            /* height: 100px; */
+           border: 2px dotted orangered;
+           text-align: center;
+           padding: 1rem;
+           font-size: 8rem;
+           letter-spacing: 2px;
+           background-color: wheat;
+           font-weight: 500;
+           font-family: cursive;
+        }
+        span{
+            font-size: 12rem;
+        }
+        p{
+            font-size: 3rem;
+        }
+        @media screen and (max-width:750px){
+        #s{
+            
+           /* border: 2px dotted orangered; */
+           text-align: center;
+           padding: 0.5rem;
+           font-size: 5rem;
+           letter-spacing: 2px;
+           background-color: wheat;
+           font-weight: 500;
+           font-family: cursive;
+
+        }
+        #d{
+            text-align: center;
+           padding: 0.5rem;
+           font-size: 5rem;
+           letter-spacing: 2px;
+           background-color: wheat;
+           font-weight: 500;
+           font-family: cursive;
+
+
+        }
+        #h{
+           /* border: 2px dotted orangered; */
+           text-align: center;
+           padding: 0.5rem;
+           font-size: 5rem;
+           letter-spacing: 2px;
+           background-color: wheat;
+           font-weight: 500;
+           font-family: cursive;
+        }
+        #m{
+          
+           /* border: 2px dotted orangered; */
+           text-align: center;
+           padding: 0.5rem;
+           font-size: 5rem;
+           letter-spacing: 1px;
+           background-color: wheat;
+           font-weight: 500;
+           font-family: cursive;
+        }
+        .outer{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
+        }
+        span{
+            font-size: 5rem;
+        }
+        }
+        @media screen and (max-width:450px){
+            #s{
+            
+           /* border: 2px dotted orangered; */
+           /* text-align: center; */
+           /* padding: 0.5rem; */
+           font-size: 2rem;
+           letter-spacing: 1px;
+           background-color: wheat;
+           font-weight: 500;
+           font-family: cursive;
+
+        }
+        #d{
+           /* border: 2px dotted orangered; */
+           /* text-align: center; */
+           /* padding: 0.5rem; */
+           font-size: 2rem;
+           letter-spacing: 1px;
+           background-color: wheat;
+           font-weight: 500;
+           font-family: cursive;
+        }
+
+        #h{
+           /* border: 2px dotted orangered; */
+           /* text-align: center; */
+           /* padding: 0.5rem; */
+           font-size: 2rem;
+           letter-spacing: 1px;
+           background-color: wheat;
+           font-weight: 500;
+           font-family: cursive;
+        }
+        #m{
+          
+           /* border: 2px dotted orangered; */
+           /* text-align: center; */
+           /* padding: 0.5rem; */
+           font-size: 2rem;
+           letter-spacing: 1px;
+           background-color: wheat;
+           font-weight: 500;
+           font-family: cursive;
+        }
+        .outer{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
+            gap: 1rem;
+        }
+        span{
+            /* font-size: 1rem; */
+        }
+        .inner{
+            display: flex;
+            
+        }
+        p{
+            font-size: 1rem;
+        }
+        }
+    </style>
+</head>
+<body>
+     <div class="outer">
+        <p>Coming Soon Your Favourite Festival 🎇💥🥰</p>
+        <div class="inner">
+
+            <div id="d"></div><span>:</span>
+            <div id="h"></div><span>:</span>
+            <div id="m"></div><span>:</span>
+            <div id="s"></div>
+        </div>
+    </div>
+
+ <script> 
+  
+    function cdown() {
+
+
+
+
+let date = new Date();
+// console.log(date)
+let fdate = new Date(2022, 08, 26);
+// console.log(fdate)
+let ctime = date.getTime();
+// console.log(ctime)
+let etime = fdate.getTime();
+// console.log(etime)
+let trr = etime - ctime;
+// console.log(trr)
+let sval = Math.floor(trr / 1000);
+let mval = Math.floor(sval / 60);
+let hval = Math.floor(mval / 60)
+let dval = Math.floor(hval / 24);
+hval %= 24;
+mval %= 60;
+sval %= 60;
+hval = (hval < 10) ? "0" + hval : hval;
+mval = (mval < 10) ? "0" + mval : mval;
+sval = (sval < 10) ? "0" + sval : sval;
+document.getElementById("d").innerHTML = dval
+document.getElementById("h").innerHTML = hval
+document.getElementById("m").innerHTML = mval
+document.getElementById("s").innerHTML = sval
+setTimeout(cdown, 1000)
+}
+cdown()
+    
+
+</script>
+
+    
+</body>
+
+    
+</html>
